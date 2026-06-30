@@ -37,10 +37,10 @@ const App = () => {
 
       }} />
       <button onClick={() => {
-        dispatch(incrementByAmount(Number(num)))
+        dispatch(incrementByAmount(Number(num )))
       }}>increment by Amount
       </button>
-      
+
     </div>
   )
 }

@@ -40,9 +40,7 @@ const App = () => {
         dispatch(incrementByAmount(Number(num)))
       }}>increment by Amount
       </button>
-
-
-
+      
     </div>
   )
 }

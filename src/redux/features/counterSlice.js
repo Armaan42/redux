@@ -11,9 +11,15 @@ export const counterSlice = createSlice({
         },
         decrement:(state) => {
             state.value -= 1
+        },
+        increaseByFive:(state) => {
+            state.value += 5
+        },
+        decreaseByFive:(state) => {
+            state.value -= 5
         }
     }
 })
 
-export const {increment, decrement} = counterSlice.actions
+export const {increment, decrement, increaseByFive, decreaseByFive} = counterSlice.actions
 export default counterSlice.reducer

@@ -30,8 +30,8 @@ const searchSlice = createSlice({
         },
         clearResults: (state, action) => {
             state.results = []
-        };
-    };
+        },
+    },
 });
 
 export const {setQuery, setActiveTabs, setError, setResults, clearResults} = searchSlice.actions

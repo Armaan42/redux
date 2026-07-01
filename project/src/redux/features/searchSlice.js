@@ -18,15 +18,22 @@ const searchSlice = createSlice({
         },
         setResults: (state, action) => {
             state.results = action.payload
+            state.loading = false // when the results comes the loading needs to be false
         },
-        setLoading: (state, action) => {
-            state.results = action.payload
+        setLoading: (state) => {
+            state.results = true
+            state.error = null // when loading chal rhi hain us time pe kaise error aya sakta hain impossible
         },
         setError: (state, action) => {
             state.results = action.payload
+            state.loading = false // jab error show hoga to loading automatically false ho jayegi
         },
+        clearResults: (state, action) => {
+            state.results = []
+        }
     }
 })
 
-export const {setQuery, setActiveTabs, setActiveTabs, setError, setResults} = searchSlice.actions
+export const {setQuery, setActiveTabs, setActiveTabs, setError, setResults, clearResults} = searchSlice.actions
+
 export default searchSlice.reducer

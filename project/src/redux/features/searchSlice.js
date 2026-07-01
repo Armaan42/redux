@@ -27,3 +27,6 @@ const searchSlice = createSlice({
         },
     }
 })
+
+export const {setQuery, setActiveTabs, setActiveTabs, setError, setResults} = searchSlice.actions
+export default searchSlice.reducer

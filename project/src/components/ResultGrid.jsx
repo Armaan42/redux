@@ -12,7 +12,10 @@ const ResultGrid = () => {
     useEffect(function() {
 
         const getData = async () => {
-        let data
+
+        try {
+            let data = []
+
         if(activeTab == 'photos') {
             let response = await fetchPhotos(query)
             data = response.results.map((item) => ({
@@ -45,6 +48,9 @@ const ResultGrid = () => {
             
         }
         dispatch(setResults(data))
+        } catch (error) {
+            
+        }
     }
         getData()
     },[query, activeTab])
